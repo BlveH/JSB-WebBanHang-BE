@@ -24,13 +24,13 @@ public class EmailSenderServiceImpl implements EmailSenderService {
     @Override
     public void sendVerificationToken(String toEmail, Map<String, Object> attributes) {
         String text = getEmailContent("verify-email.ftlh", attributes);
-        sendEmail(toEmail, "[Phúc Anh Đường] Xác thực email", text);
+        sendEmail(toEmail, "[BLUE] Xác thực email", text);
     }
 
     @Override
     public void sendForgetPasswordToken(String toEmail, Map<String, Object> attributes) {
         String text = getEmailContent("forget-password-email.ftlh", attributes);
-        sendEmail(toEmail, "[Phúc Anh Đường] Yêu cầu cấp lại mật khẩu", text);
+        sendEmail(toEmail, "[BLUE] Yêu cầu cấp lại mật khẩu", text);
     }
 
     private String getEmailContent(String template, Map<String, Object> model) {
